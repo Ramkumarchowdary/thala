@@ -19,9 +19,9 @@ const Tala = () => {
       return setDhoni(true);
     } else {
       setDhoni(false);
-      setTimeout(()=>{
+      setTimeout(() => {
         alert("beter luck next time 🤦‍♀️");
-      },1000)
+      }, 1000);
 
       // console.log("ramkumarhii fuckyou!");
     }
