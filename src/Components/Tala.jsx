@@ -18,13 +18,17 @@ const Tala = () => {
     if (splited.length === 7) {
       return setDhoni(true);
     } else {
-      alert("beter luck next time 🤦‍♀️")
+      setDhoni(false);
+      setTimeout(()=>{
+        alert("beter luck next time 🤦‍♀️");
+      },1000)
+
       // console.log("ramkumarhii fuckyou!");
     }
   };
 
   return (
-    <Container sx={{ mt: "20px",width:"100% "}}>
+    <Container sx={{ mt: "20px", width: "100% " }}>
       <Typography
         variant="h2"
         sx={{
@@ -45,15 +49,24 @@ const Tala = () => {
         placeholder="Enter your text"
         multiline
         onChange={inputvalue}
-     
-        
       />
       <Button variant="contained" endIcon={<SendIcon />} onClick={value}>
         Send
       </Button>
-      
-      {dhoni && <Stack sx={{ position: "relative", bottom: "10px",width:"100%",border:1 }}> <Dhoni /> </Stack>}
-    
+
+      {dhoni && (
+        <Stack
+          sx={{
+            position: "relative",
+            bottom: "10px",
+            width: "100%",
+            border: 1,
+          }}
+        >
+          {" "}
+          <Dhoni />{" "}
+        </Stack>
+      )}
     </Container>
   );
 };
